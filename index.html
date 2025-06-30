@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SUHAIL Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0f0f0f;
+            color: #f2e9dc;
+            line-height: 1.6;
+        }
+
+        a {
+            color: #d4af37;
+            text-decoration: none;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 2rem;
+            background-color: #0a0a0a;
+            border-bottom: 1px solid #222;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #f5deb3;
+        }
+
+        .navbar nav a {
+            margin: 0 1rem;
+            font-size: 0.95rem;
+        }
+
+        .cta-btn {
+            background-color: #f5deb3;
+            color: #000;
+            border: none;
+            padding: 10px 20px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .hero {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            padding: 4rem 2rem;
+        }
+
+        .hero-text {
+            max-width: 500px;
+        }
+
+        .hero-text h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-text span {
+            color: #d4af37;
+            font-style: italic;
+        }
+
+        .hero-text p {
+            margin-bottom: 1.5rem;
+            color: #aaa;
+        }
+
+        .services-btn {
+            padding: 10px 18px;
+            border: 1px solid #d4af37;
+            background: transparent;
+            color: #d4af37;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .hero-img img {
+            width: 300px;
+            border-radius: 50%;
+            filter: brightness(0.6);
+        }
+
+        .services {
+            display: flex;
+            justify-content: space-around;
+            padding: 3rem 1rem;
+            background: #181818;
+        }
+
+        .service-card {
+            background: #1e1e1e;
+            padding: 2rem;
+            margin: 0 1rem;
+            border-radius: 8px;
+            flex: 1;
+            text-align: center;
+        }
+
+        .work {
+            padding: 4rem 1rem;
+            background: #0f0f0f;
+        }
+
+        .work h2 {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .work h2 span {
+            color: #d4af37;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .project-card {
+            background: #1a1a1a;
+            padding: 1rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .project-card img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 0.5rem;
+        }
+
+        .about,
+        .blog,
+        .contact {
+            padding: 3rem 1rem;
+            background-color: #111;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .about h2,
+        .blog h2,
+        .contact h2 {
+            color: #d4af37;
+            margin-bottom: 1rem;
+        }
+        .scroll-down {
+    text-align: center;
+    width: 100%;
+    margin-top: 3rem;
+    animation: bounce 2s infinite;
+    color: #d4af37;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+}
+
+
+    </style>
+</head>
+<script>
+  // Always scroll to top on reload
+  window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+  };
+
+  // Scroll to next section when 'Scroll Down' clicked
+  document.querySelector('.scroll-down').addEventListener('click', () => {
+    document.querySelector('#services').scrollIntoView({
+      behavior: 'smooth'
+    });
+  });
+</script>
+
+<body>
+    <header class="navbar">
+        <div class="logo">SUHAIL</div>
+        <nav>
+            <a href="#services">Services</a>
+            <a href="#work">Work</a>
+            <a href="#about">About</a>
+            <a href="#blog">Blog</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <button class="cta-btn">Let's Talk</button>
+    </header>
+
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Web Designer <span>& Developer</span></h1>
+            <p>Premium web design, development, and SEO services to help your business stand out.</p>
+            <button class="services-btn">My Services</button>
+        </div>
+        <div class="hero-img">
+            <img src="https://i.pinimg.com/736x/5b/9d/22/5b9d2230120d8c44d934d89841c618ca.jpg"
+                alt="hero" />
+        </div>
+    </section>
+    <div class="scroll-down">
+    <span>Scroll Down ↓</span>
+</div>
+
+
+    <section class="services" id="services">
+        <div class="service-card">
+            <h3>Web Design</h3>
+            <p>Modern, responsive, and beautiful websites tailored to your needs.</p>
+        </div>
+        <div class="service-card">
+            <h3>Development</h3>
+            <p>Frontend & backend development using modern tools and frameworks.</p>
+        </div>
+        <div class="service-card">
+            <h3>SEO & Content</h3>
+            <p>Optimized content and structure to rank better on search engines.</p>
+        </div>
+    </section>
+
+    <section class="work" id="work">
+        <h2>Selected <span>Work</span></h2>
+        <div class="gallery">
+            <div class="project-card">
+                <img src="https://www.webhopers.com/wp-content/uploads/2016/04/eCommerce-Web-Development-Services.jpg"
+                    alt="Work1" />
+                <p>Space - E-commerce Site</p>
+            </div>
+            <div class="project-card">
+                <img src="https://mightyslide.com/wp-content/uploads/edd/2024/11/01-15.jpg" alt="Work2" />
+                <p>Nova - Portfolio Template</p>
+            </div>
+            <div class="project-card">
+                <img src="https://i.ytimg.com/vi/BaL9hBnlBfM/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAgwZ3-PQlT3j0r1LLDaOuUAh_y5w"
+                    alt="Work3" />
+                <p>Sonic - Blog CMS</p>
+            </div>
+            <div class="project-card">
+                <img src="https://cdn.dribbble.com/userupload/17770327/file/original-ed64bed1600b4d7221b1cdcb550c1fda.jpg?format=webp&resize=400x300&vertical=center"
+                    alt="Work4" />
+                <p>Solar - Product Landing Page</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <h2>About Me</h2>
+        <p>Hi, I'm Suhail – a B.Tech CSE student and passionate web developer. I create elegant, responsive, and fast
+            websites that provide real-world value. Skilled in HTML, CSS, JavaScript, and ReactJS.</p>
+        <p>📍 Assam, India<br />📧 suhail999v@email.com</p>
+    </section>
+
+    <section class="blog" id="blog">
+        <h2>My Blog</h2>
+        <p><strong>Top 5 Free Hosting Platforms for Developers</strong><br />Learn where to host your portfolio for free
+            and make your projects live in minutes.</p>
+        <p><strong>Beginner's Guide to Responsive Design</strong><br />Tips and techniques to make your site
+            mobile-friendly and modern.</p>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2>Contact Me</h2>
+        <p>Need a website or want to collaborate? Let's talk!</p>
+        <p><a href="mailto:suhail999v@email.com">suhail999v@email.com</a></p>
+        <p><a
+                href="https://www.linkedin.com/in/suhail-ahmed-281a14327?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">LinkedIn
+                Profile</a></p>
+    </section>
+
+</body>
+
+</html>
